@@ -8,9 +8,9 @@ const pool = mysql.createPool({
 
 async function main(){
 	try {
-		const path = "/database/coboldata/preTrade/O40/O40V.DAT.01090211"
+		const path = "/data/test.csv"
 		const sqlcmd = (`LOAD DATA LOCAL INFILE '${path}' ` +
-						"INTO TABLE `SO40_OLD` " +
+						"INTO TABLE `test` " +
 						"FIELDS TERMINATED BY ',' " +
 						"LINES TERMINATED BY '\n'");
 		await pool.query({
